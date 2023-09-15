@@ -2,5 +2,7 @@
 
 TO RUN
 
-open terminal 
+open terminal and enter
+
+
 npm i body-parser ejs express sqlite3 nodemon
