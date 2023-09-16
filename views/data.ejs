@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Table</title>
+</head>
+<body>
+    <h1>Data Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(function(row) { %>
+                <tr>
+                    <td><%= row.id %></td>
+                    <td><%= row.name %></td>
+                    <td><%= row.email %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <a href="/">Go back to the form</a>
+</body>
+</html>
