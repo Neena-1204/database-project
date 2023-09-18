@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Table</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    
+    <h1>View Employee</h1>
+    <div class="table">
+
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(function(row) { %>
+                <tr>
+                    <td><%= row.id %></td>
+                    <td><%= row.name %></td>
+                    <td><%= row.designation %></td>
+                    <td><%= row.phonenumber  %></td>
+                    <td><%= row.email %></td>
+                    <td><%= row.image ? `<img src="uploads/${row.image}" alt="image" width="100px">` : '' %></td>
+                    <td>
+                        <a href="/view/<%= row.id %>">View</a> |
+                        <a href="/edit/<%= row.id %>">Edit</a> |
+                        <a href="/delete/<%= row.id %>">Delete</a>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</div>
+    <a href="/">Go back to the form</a>
+</body>
+</html>

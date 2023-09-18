@@ -29,4 +29,3 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching data:', error);
         });
 });
-

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Employee</title> 
+</head>
+<link rel="stylesheet" href="style.css">
+<style>
+    /* CSS for the grid layout */
+    *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns in the grid */
+    gap: 10px; /* Adjust the gap between grid items as needed */
+}
+
+/* Style for input boxes */
+.input-box {
+    padding: 10px;
+}
+
+.input-box label {
+    display: block;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.choose {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns in a row */
+    gap: 10px; /* Adjust the gap between input-box elements */
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.submit{
+    width: 205%;
+    height: 40px;
+    background-color: green;
+    border-radius: 0.5rem;
+    font-size: larger;
+    color:white;
+    border: 1px solid green;
+}
+
+#rate_type{
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+#image{
+    width: 250px;
+
+
+}
+
+
+</style>
+
+<body>
+    <div class="main">
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <center><h2  style="color: rgb(62, 62, 241);">Add Employee</h2></center>
+        <div class="content">
+        <div class="input-box">
+            <label for="name">First Name</label>
+            <input type="text" placeholder="Enter first name" name="name" required>
+        </div>
+        <div class="input-box">
+           <label for="name">Last Name</label>
+            <input type="text" placeholder="Enter last name" name="last-name" required>
+        </div>
+
+        <div class="input-box">
+            <label for="designation">Designation</label>
+            <input type="text" placeholder="Enter your designation" name="designation" required>
+        </div>
+
+        <div class="input-box">
+            <label for="phonenumber">Phone Number</label>
+            <input type="tel" placeholder="Enter phone number" name="phonenumber" required>
+        </div>
+
+        <div class="input-box">
+            <label for="rate_type">Rate Type:</label>
+                <select id="rate_type" name="rate_type" required>
+                    <option value="hourly">Hourly</option>
+                    <option value="salaried">Salaried</option>
+                    <option value="contract">Contract</option>
+                </select>
+        </div>
+
+        <div class="input-box">
+            <label for="houre rate/salary">Houre Rate/Salary</label>
+            <input type="text" placeholder="Enter your houre rate/salary" name="houre rate/salary" required>
+        </div> 
+
+        <div class="input-box">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter your valid email address" name="email" required>
+        </div>
+        
+        <div class="input-box">
+            <label for="bloodgroup">Blood Group</label>
+            <input type="bloodgroup" placeholder="Enter your Blood Group" name="password" required>
+        </div>
+        
+       
+        <div class="input-box">                                                 
+            <label for="addressline1">Address Line 1</label>
+            <input type="text" placeholder="Enter your address" name="address line 1" required>
+        </div>
+        <div class="input-box">
+            <label for="addressline2">Address Line 2</label>
+            <input type="text" placeholder="Enter your address" name="address line 2" required>
+        </div>
+
+        
+
+        <div class="input-box">
+            <label for="country">Country</label>
+            <input type="text" placeholder="Enter your country" name="country" required>
+        </div>
+        <div class="input-box">
+            <label for="city">City</label>
+            <input type="text" placeholder="Enter your city" name="city" required>
+        </div>
+        <div class="input-box">
+            <label for="zip code">Zip Code</label>
+            <input type="text" placeholder="Enter your zip code" name="zip code" required>
+        </div>
+
+        <div class="input-box">
+            <label for="image">Image</label>
+            <input class="image" type="file" id="image" name="image" accept="image/*" required>
+        </div>
+        
+
+        <input class="submit" type="submit" value="Submit">
+    </form>
+        
+    </div>
+    
+</body>
+</html>
